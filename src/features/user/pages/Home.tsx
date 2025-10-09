@@ -1,10 +1,13 @@
-import ArtHero from "../component/HomeBG"
+import ArtHero from "../component/HomeBG";
+import Features from "../component/Features";
 
-const Home = ()=>{
+const Home = () => {
+  return (
+    <>
+      <ArtHero />
+      <Features />
+    </>
+  );
+};
 
-    return (
-        <ArtHero />
-    )
-}
-
-export default Home
+export default Home;
