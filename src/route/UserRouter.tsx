@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react"
-const Hompage = lazy(()=> import('../features/user/component/Home'))
+const Hompage = lazy(()=> import('../features/user/pages/Home'))
 
 
 
