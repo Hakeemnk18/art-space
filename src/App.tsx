@@ -11,14 +11,13 @@ function App() {
 
 
   return (
-    <>
+    <div className="bg-gray-100 min-h-screen"> 
       <ErrorBoundary>
         <ToastContainer position="top-right" autoClose={1000} />
         <Navbar />
         <Outlet />
       </ErrorBoundary>
-
-    </>
+    </div>
   )
 }
 
