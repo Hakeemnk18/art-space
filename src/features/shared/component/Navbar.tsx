@@ -57,7 +57,7 @@ export const Navbar: React.FC = () => {
         <ul
           className={
             `md:hidden flex flex-col items-start gap-6 px-13 pb-6 pt-3 bg-[#f7f6f1] shadow-lg rounded-xl absolute top-16 right-4 
-            transition-all duration-300 ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5 pointer-events-none'
+            transform-origin-top-right transition-all duration-300 ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5 pointer-events-none'
             }`}>
           {navLinks.map((link) => (
             <li key={link.name}>
