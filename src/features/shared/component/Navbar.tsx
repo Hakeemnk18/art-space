@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/pages' },
-  { name: 'Product', href: '/featured' },
+  { name: 'Product', href: '/products' },
 ];
 
 export const Navbar: React.FC = () => {
@@ -61,13 +62,13 @@ export const Navbar: React.FC = () => {
             }`}>
           {navLinks.map((link) => (
             <li key={link.name}>
-              <a
-                href={link.href}
+              <Link
+                to={link.href}
                 className={`text-lg block text-left  transition-colors hover:text-orange-200 text-gray-500`}
                 onClick={() => setMenuOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
