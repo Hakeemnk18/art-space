@@ -13,8 +13,8 @@ const FeaturedProducts = () => {
   const [productData, setProductData] = useState<IProduct[]>(products);
   const [isSortModal, setIsSortModal] = useState<boolean>(false);
   const [selectedSort, setSelectedSort] = useState<string>("");
-  const [isFilterModal, setIsfilterModal] = useState<boolean>(false)
-  const [selectedFilter, setSelectedFilter] = useState<string>("All")
+  const [isFilterModal, setIsfilterModal] = useState<boolean>(false);
+  const [selectedFilter, setSelectedFilter] = useState<string>("All");
   const [staticData, setStaticData] = useState<IProduct[]>(products);
 
   const sortOptions = [
@@ -24,42 +24,42 @@ const FeaturedProducts = () => {
     "Z - A",
   ];
 
-  const filterOptions = [
-    "All",
-    "Bouquets",
-    "Tot Bag",
-    "Embroidery"
-  ]
-
-  
+  const filterOptions = ["All", "Bouquets", "Tot Bag", "Embroidery"];
 
   const handleFilter = () => {
-    setIsSortModal(false)
-    setIsfilterModal(true)
-  }
+    setIsSortModal(false);
+    setIsfilterModal(true);
+  };
 
   const handleSort = () => {
-    setIsfilterModal(false)
+    setIsfilterModal(false);
     setIsSortModal(true);
-    
+  };
+
+  const handleShopNow = () => {
+    const message = `Hi! I want to buy the tot bag.`;
+    const url = `https://wa.me/${
+      918714732282
+    }?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
   };
 
   const onOptionSelect = (option: string) => {
     setSelectedSort(option);
-    setIsSortModal(false)
+    setIsSortModal(false);
   };
 
   const onFilterSelect = (option: string) => {
     setSelectedFilter(option);
-    setIsfilterModal(false)
+    setIsfilterModal(false);
   };
-  const handleFilterAndSort = ()=>{
-    const filtered: IProduct[] = toFilteredProduct(selectedFilter, staticData)
-    const sorted: IProduct[] = toSortedProduct(selectedSort, filtered)
-    setProductData(sorted)
-  }
+  const handleFilterAndSort = () => {
+    const filtered: IProduct[] = toFilteredProduct(selectedFilter, staticData);
+    const sorted: IProduct[] = toSortedProduct(selectedSort, filtered);
+    setProductData(sorted);
+  };
   useEffect(() => {
-    handleFilterAndSort()
+    handleFilterAndSort();
   }, [selectedSort, selectedFilter]);
 
   return (
@@ -72,6 +72,7 @@ const FeaturedProducts = () => {
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {productData.map((product) => (
               <ShopProductCard
+                handleshopNow={handleShopNow}
                 key={product.id}
                 price={product.showPrice}
                 imageUrl={product.imageUrl}
