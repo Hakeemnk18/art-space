@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // --- UPDATED ---
 // The 'price' property has been removed from the interface.
@@ -11,7 +12,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ imageUrl, category, title, url }) => {
   return (
-    <a href={url} className="group block overflow-hidden">
+    <Link to={url} className="group block overflow-hidden">
       <div 
         className="
           bg-white 
@@ -56,7 +57,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ imageUrl, category, title, ur
           */}
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

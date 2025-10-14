@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/pages' },
+  { name: 'About', href: '/#about' },
   { name: 'Product', href: '/products' },
 ];
 
@@ -34,12 +35,12 @@ export const Navbar: React.FC = () => {
         <ul className="hidden md:flex gap-8 items-center">
           {navLinks.map((link) => (
             <li key={link.name}>
-              <a
-                href={link.href}
+              <HashLink
+                to={link.href}
                 className={`text-lg transition-colors hover:text-orange-200 text-gray-500`}
               >
                 {link.name}
-              </a>
+              </HashLink>
             </li>
           ))}
         </ul>
@@ -62,13 +63,13 @@ export const Navbar: React.FC = () => {
             }`}>
           {navLinks.map((link) => (
             <li key={link.name}>
-              <Link
+              <HashLink
                 to={link.href}
                 className={`text-lg block text-left  transition-colors hover:text-orange-200 text-gray-500`}
                 onClick={() => setMenuOpen(false)}
               >
                 {link.name}
-              </Link>
+              </HashLink>
             </li>
           ))}
         </ul>
