@@ -10,3 +10,33 @@
     scrollbar-width: none; /* Firefox */
   }
 }
+
+.font-great-vibes {
+  font-family: "Great Vibes", cursive;
+}
+.font-sacramento {
+  font-family: "Sacramento", cursive;
+}
+.font-caveat {
+  font-family: "Caveat", cursive;
+}
+.Playfair-Display {
+  font-family: 'Playfair Display', serif;
+}
+.Lora{
+  font-family: 'Lora', serif;
+}
+.Poppins{
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-cookie {
+  font-family: 'Cookie', cursive;
+}
+.font-mr-dafoe {
+  font-family: 'Mr Dafoe', cursive;
+}
+.font-lily-script {
+  font-family: 'Lily Script One', cursive;
+}
+
