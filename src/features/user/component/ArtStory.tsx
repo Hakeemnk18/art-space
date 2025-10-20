@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 // You can define props if you want to make the image, title, and text dynamic
 // For simplicity, we'll keep them static here but you could easily add:
@@ -12,17 +12,18 @@ import React from 'react';
 
 const ArtisanStory: React.FC = () => {
   return (
-    <section id='about' className="bg-white py-16 sm:py-20">
+    <section id="about" className="bg-white py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="
+        <div
+          className="
           flex 
           flex-col 
           md:flex-row-reverse // Image on right for desktop, content on left
           items-center 
           gap-12 
           lg:gap-16
-        ">
-
+        "
+        >
           {/* Image Column */}
           <div className="w-full md:w-1/2 flex justify-center">
             {/* Using a square aspect ratio for the image, object-cover to fill */}
@@ -42,16 +43,15 @@ const ArtisanStory: React.FC = () => {
               Meet the Artisan Behind Artspace
             </h2>
             <p className="mt-4 text-lg text-gray-700 leading-relaxed mb-8">
-              At Artspace, every creation tells a story of passion, dedication, and meticulous craft. 
-              Our founder, [Artisan's Name/Our Team], pours their heart into hand-painting each tote, 
-              arranging vibrant bouquets, and intricately embroidering every detail. 
-              We believe in bringing unique, handcrafted beauty into your life, 
-              made with sustainable practices and a love for artistry.
+              At Artspace, every creation is a testament to passion, dedication,
+              and meticulous craftsmanship. Founded by Fathima Najina, each
+              piece is hand-painted, thoughtfully arranged, and intricately
+              embroidered with care. We are devoted to delivering unique,
+              handcrafted beauty made with sustainable practices and a deep love
+              for artistry
             </p>
             {/* Call to action button */}
-           
           </div>
-
         </div>
       </div>
     </section>
