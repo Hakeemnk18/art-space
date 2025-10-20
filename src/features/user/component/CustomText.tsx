@@ -20,7 +20,7 @@ const ChevronDownIcon = () => (
 const ToteBagHero = () => {
   const [title, setTitle] = useState("Your  Design Here");
   const [fontStyle, setFontStyle] = useState("font-cookie");
-  const toteBagImageUrl = "/images/IMG_20251014_194250-tot-bag.png";
+  const toteBagImageUrl = "/images/compressed.tot-bag (1).png";
 
   const handleFontChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setFontStyle(e.target.value);
@@ -40,7 +40,7 @@ const ToteBagHero = () => {
             <div className="transform  translate-y-30 sm:translate-y-50 text-center">
               <AnimatePresence mode="wait">
                 <motion.h1
-                  key={title + fontStyle} // Animate when text or font changes
+                  key={fontStyle} 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 0.75, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
