@@ -2,13 +2,12 @@
 import ProductCard from './ProductCard';
 import type { IProduct } from '../../../data/product'; 
 import { products } from '../../../data/product';
-import { useState } from 'react';
+
 
 
 const FeaturedProducts = () => {
-  const [featuredItems, setFeaturedItems] = useState<IProduct[]>(
-    products.filter((item)=> item.isFeatured === true)
-  )
+  const featuredItems: IProduct[] = products.filter((item)=> item.isFeatured === true)
+  
   return (
     <section className="bg-slate-50 py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

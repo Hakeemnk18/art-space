@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ProductCard from './ProductCard';
 import type { IProduct } from '../../../../data/product';
 import { products } from '../../../../data/product';
@@ -7,7 +7,7 @@ import { products } from '../../../../data/product';
 
 
 const ProductScroller: React.FC = () => {
-  const [newArrivals, setNewArrivals] = useState<IProduct[]>(products.filter((item)=> item.isNewArrivals === true))
+  const newArrivals:IProduct[] = products.filter(item => item.isNewArrivals === true);
 
   
   return (

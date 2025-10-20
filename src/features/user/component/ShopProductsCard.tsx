@@ -13,7 +13,6 @@ const ShopProductCard: React.FC<ShopProductCardProps> = ({
   imageUrl,
   title,
   price,
-  url,
   handleshopNow
 }) => {
   return (

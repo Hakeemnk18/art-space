@@ -1,10 +1,8 @@
 import ShopProductCard from "./ShopProductsCard";
-import SortAndFilterBar from "./SortAndFilter";
 import { useSearchParams } from "react-router-dom";
 import { products } from "../../../data/product";
 import type { IProduct } from "../../../data/product";
 import { useEffect, useState } from "react";
-import SortOptions from "./SortAndFilter";
 import SortModal from "./SortAndFilter";
 import { toSortedProduct } from "../../../helpers/sort";
 import { toFilteredProduct } from "../../../helpers/filter";
@@ -18,7 +16,7 @@ const FeaturedProducts = () => {
   const [selectedSort, setSelectedSort] = useState<string>("");
   const [isFilterModal, setIsfilterModal] = useState<boolean>(false);
   const [selectedFilter, setSelectedFilter] = useState<string>(categoryFilter || "All");
-  const [staticData, setStaticData] = useState<IProduct[]>(products);
+  const staticData :IProduct[] = products
 
   const sortOptions = [
     "Price - Low to High",
