@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 // Define the props for our new component
 interface SortModalProps {

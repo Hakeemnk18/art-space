@@ -1,10 +1,10 @@
-import { useNavigate } from "react-router-dom";
+
 import { Link } from "react-router-dom";
 
 
 const ArtHero = ()=> {
 
-  const navigate = useNavigate()
+  
     return (
   <div 
     className="relative flex items-center justify-center min-h-[500px] py-16 px-4 sm:px-6 lg:px-8 

@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
 const VideoPlayer = () => {
-  const youtubeVideoId = "UVLmTFhxMD8"; // This is the ID from "https://youtu.be/UVLmTFhxMD8?si=Pm6mLiBDepH1xSSb"
-  const videoSrc = `https://www.youtube.com/embed/${youtubeVideoId}`;
+
+
 
   useEffect(() => {
     if ((window as any).instgrm) {

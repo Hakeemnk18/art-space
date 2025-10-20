@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react"
+import { lazy } from "react"
 const Hompage = lazy(()=> import('../features/user/pages/Home'))
 const ProductsPage = lazy(()=> import('../features/user/component/Products'))
 

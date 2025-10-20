@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import type { IProduct } from '../../../../data/product';
-import { Link, Links } from 'react-router-dom';
-// 🗑️ No need to import ProductStyles.css anymore!
+import { Link } from 'react-router-dom';
+
 
 interface ProductCardProps {
   product: IProduct;
