@@ -49,24 +49,7 @@ const ArtisanStory: React.FC = () => {
               made with sustainable practices and a love for artistry.
             </p>
             {/* Call to action button */}
-            <a 
-              href="/about" // --- Link to your actual about page ---
-              className="
-                inline-flex items-center justify-center 
-                px-8 py-3 
-                border border-transparent 
-                text-base font-medium 
-                rounded-md 
-                text-white bg-blue-700 // Dark blue primary button
-                hover:bg-blue-800 
-                transition-colors 
-                duration-200 
-                ease-in-out
-                shadow-md
-              "
-            >
-              Read Our Full Story
-            </a>
+           
           </div>
 
         </div>

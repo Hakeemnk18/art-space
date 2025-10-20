@@ -1,9 +1,14 @@
 
 import ProductCard from './ProductCard';
-import { products } from '../../../data/product'; 
+import type { IProduct } from '../../../data/product'; 
+import { products } from '../../../data/product';
+import { useState } from 'react';
 
 
 const FeaturedProducts = () => {
+  const [featuredItems, setFeaturedItems] = useState<IProduct[]>(
+    products.filter((item)=> item.isFeatured === true)
+  )
   return (
     <section className="bg-slate-50 py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,13 +25,13 @@ const FeaturedProducts = () => {
 
         {/* Responsive Grid */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
+          {featuredItems.map((product) => (
             <ProductCard
               key={product.id}
               imageUrl={product.imageUrl}
               category={product.category}
               title={product.title}
-              url={product.url}
+              
             />
           ))}
         </div>

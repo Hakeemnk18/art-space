@@ -23,27 +23,21 @@ const RouteError: React.FC = () => {
             transform="rotate(-45 13.464 19.464)"
             fill="#A78BFA"
           />
-          <rect
-            x="9"
-            y="34"
-            width="30"
-            height="4"
-            rx="2"
-            fill="#F59E42"
-          />
+          <rect x="9" y="34" width="30" height="4" rx="2" fill="#F59E42" />
         </svg>
         <h1 className="text-4xl font-extrabold text-yellow-600 mb-4 drop-shadow-sm">
-          404: Auction Not Found!
+          404: Not Found!
         </h1>
         <p className="text-lg text-gray-700 mb-8">
-          Looks like the item you're bidding on doesn't exist.<br />
-          Maybe it's already gone under the hammer.
+          Looks like the artwork you're searching for isn't here.
+          <br />
+          Maybe it's already hanging in a new collection.
         </p>
         <Link
           to="/"
           className="px-6 py-2 bg-blue-600 hover:bg-yellow-600 text-white font-bold rounded-full shadow transition duration-200"
         >
-          Back to Auctions
+          Back to Home
         </Link>
       </div>
       <style>{`
