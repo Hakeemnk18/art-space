@@ -1,6 +1,6 @@
 import ShopProductCard from "./ShopProductsCard";
 import SortAndFilterBar from "./SortAndFilter";
-
+import { useSearchParams } from "react-router-dom";
 import { products } from "../../../data/product";
 import type { IProduct } from "../../../data/product";
 import { useEffect, useState } from "react";
@@ -10,11 +10,14 @@ import { toSortedProduct } from "../../../helpers/sort";
 import { toFilteredProduct } from "../../../helpers/filter";
 
 const FeaturedProducts = () => {
+  const [searchParams] = useSearchParams();
+  const categoryFilter = searchParams.get('category');
+  console.log("category ",categoryFilter)
   const [productData, setProductData] = useState<IProduct[]>(products);
   const [isSortModal, setIsSortModal] = useState<boolean>(false);
   const [selectedSort, setSelectedSort] = useState<string>("");
   const [isFilterModal, setIsfilterModal] = useState<boolean>(false);
-  const [selectedFilter, setSelectedFilter] = useState<string>("All");
+  const [selectedFilter, setSelectedFilter] = useState<string>(categoryFilter || "All");
   const [staticData, setStaticData] = useState<IProduct[]>(products);
 
   const sortOptions = [
@@ -24,7 +27,7 @@ const FeaturedProducts = () => {
     "Z - A",
   ];
 
-  const filterOptions = ["All", "Bouquets", "Tot Bag", "Embroidery"];
+  const filterOptions = ["All", "Bouquets", "Tot Bag", "Embroidery","Frame", 'Gift', 'Wall Decor',"Wedding Supplies"];
 
   const handleFilter = () => {
     setIsSortModal(false);

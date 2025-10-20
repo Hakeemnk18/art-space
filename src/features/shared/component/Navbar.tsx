@@ -28,8 +28,8 @@ export const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-5 py-4">
         <div className="text-3xl font-serif tracking-tight">
-          <span className="font-bold">ART</span>
-          <span>SPACE</span>
+          <span className={`font-bold ${!scrolled && 'text-white '}`}>ART</span>
+          <span className={`${!scrolled && 'text-white '}`}>SPACE</span>
         </div>
         {/* Desktop nav */}
         <ul className="hidden md:flex gap-8 items-center">
@@ -37,7 +37,7 @@ export const Navbar: React.FC = () => {
             <li key={link.name}>
               <HashLink
                 to={link.href}
-                className={`text-lg transition-colors hover:text-orange-200 text-gray-500`}
+                className={`text-lg transition-colors ${!scrolled && 'text-white '} hover:text-orange-200 text-gray-500`}
               >
                 {link.name}
               </HashLink>
@@ -46,7 +46,8 @@ export const Navbar: React.FC = () => {
         </ul>
         {/* Mobile burger menu */}
         <button
-          className="md:hidden text-2xl"
+        className={`md:hidden text-2xl ${!scrolled && 'text-white '}`}
+          
           onClick={() => setMenuOpen((open) => !open)}
           aria-label="Toggle Menu"
         >

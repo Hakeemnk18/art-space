@@ -18,7 +18,7 @@ const ChevronDownIcon = () => (
 );
 
 const ToteBagHero = () => {
-  const [title, setTitle] = useState("Your  Disign Here");
+  const [title, setTitle] = useState("Your  Design Here");
   const [fontStyle, setFontStyle] = useState("font-cookie");
   const toteBagImageUrl = "/images/IMG_20251014_194250-tot-bag.png";
 
@@ -47,11 +47,11 @@ const ToteBagHero = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className={`text-[2.25rem] sm:text-[5rem] leading-none font-extrabold text-gray-900 tracking-wide ${fontStyle}`}
                 >
-                  {title.length > 6 ? (
+                  {title.length > 8 ? (
                     <>
-                      {title.substring(0, 6)}
+                      {title.substring(0, 8)}
                       <br />
-                      {title.substring(6)}
+                      {title.substring(8)}
                     </>
                   ) : (
                     title
@@ -63,7 +63,7 @@ const ToteBagHero = () => {
         </div>
 
         {/* Column 2: The Customization Controls */}
-        <div className="flex flex-col justify-center text-left">
+        <div className="flex flex-col justify-center text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
             Design Your Own Tote
           </h2>
@@ -83,6 +83,7 @@ const ToteBagHero = () => {
               </label>
               <input
                 id="customText"
+                disabled={title.length > 20 }
                 onChange={(e) => setTitle(e.target.value)}
                 className="w-full px-4 py-3 text-gray-800 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#0a192f] transition-all"
                 type="text"

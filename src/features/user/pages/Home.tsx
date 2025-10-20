@@ -6,6 +6,7 @@ import Footer from "../../shared/component/Footer";
 import ProductScroller from "../component/ProductScroller/ProductScroller";
 import Marquee from "../component/Marquee";
 import HeroBanner from "../component/CustomText";
+import VideoPlayer from "../component/VideoPlayer";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <HeroBanner />
       <Marquee text="Handcrafted with Passion • Art for Your Everyday Life •"/>
       <ArtisanStory />
+      <VideoPlayer />
       <ProductScroller />
       <Footer />
     </>

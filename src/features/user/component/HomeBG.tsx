@@ -1,24 +1,26 @@
-import React from 'react';
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-
-
-interface ArtHeroProps {
-  // headline?: string;
-  // subheading?: string;
-  // shopNowLink?: string;
-  // exploreLink?: string;
-  // backgroundImage?: string; // Optional prop to pass the image URL
-}
 
 const ArtHero = ()=> {
+
+  const navigate = useNavigate()
     return (
   <div 
     className="relative flex items-center justify-center min-h-[500px] py-16 px-4 sm:px-6 lg:px-8 
-               bg-no-repeat bg-center bg-cover overflow-hidden rounded-b-xl"
-    style={{ 
-      backgroundImage: `url('/images/hero-bg-2.jpg')`, 
+               bg-no-repeat bg-center bg-cover overflow-hidden rounded-b-xl
+               bg-[url('/images/bg-image-tot-bag.png')] 
+               lg:bg-[url('images/image-2-bg-for-pc.png')]
+               
+                "
+                // <-- Mobile default
+             
+    //  style={{ 
+    // //   // backgroundImage: `url('/images/bg-image-tot-bag.png')`, 
+    //  backgroundImage: `url('/images/image-2-bg-for-pc.png')`, 
       
-    }}
+      
+    //  }}
   >
     {/* Add the Dark Overlay for Text Readability */}
     <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
@@ -34,18 +36,18 @@ const ArtHero = ()=> {
           Explore our curated collection of artisanal tote bags, vibrant flower bouquets, and intricate embroidery pieces. Each item is crafted with passion and skill.
         </p>
         <div className="flex justify-center lg:justify-start gap-4">
-          <button className="px-8 py-3 bg-[#FDD835] text-[#3A6B5B] font-semibold rounded-lg shadow-md hover:bg-[#FCE38A] transition duration-300">
+          <Link
+          to={'/products'}
+           className="px-8 py-3 bg-[#FDD835] text-[#3A6B5B] font-semibold rounded-lg shadow-md hover:bg-[#FCE38A] transition duration-300">
             Shop Now
-          </button>
-          <button className="px-8 py-3 bg-gray-700 text-white font-semibold rounded-lg shadow-md hover:bg-gray-600 transition duration-300">
+          </Link>
+          <Link to={'/products'} className="px-8 py-3 bg-gray-700 text-white font-semibold rounded-lg shadow-md hover:bg-gray-600 transition duration-300">
             Explore Gallery
-          </button>
+          </Link>
         </div>
       </div>
 
-      <div className="flex-1 flex justify-center items-center lg:justify-end">
-        {/* Right side image or content if needed */}
-      </div>
+      
     </div>
   </div>
 );

@@ -1,15 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import type { Product } from './ProductScroller';
+import type { IProduct } from '../../../../data/product';
+import { Link, Links } from 'react-router-dom';
 // 🗑️ No need to import ProductStyles.css anymore!
 
 interface ProductCardProps {
-  product: Product;
+  product: IProduct;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const categoryQuery = encodeURIComponent(product.category);
+  const productUrl = `/products?category=${categoryQuery}`;
   return (
-    // Card container with all the styles
+    <Link to={productUrl}>
     <div
       className="
         relative flex-none w-[80vw] h-[420px] 
@@ -18,7 +21,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         flex items-end shadow-[0_10px_25px_rgba(0,0,0,0.2)] 
         transition-transform duration-300 ease-in-out hover:-translate-y-[5px]
       "
-      style={{ backgroundImage: `url(${product.imageUrl})` }}
+      style={{ backgroundImage: `url(${product.scrollUrl})` }}
     >
       {/* Gradient overlay (replaces the ::after element) */}
       <div className="absolute bottom-0 left-0 w-full h-3/5 bg-gradient-to-t from-black/85 to-transparent z-10" />
@@ -37,6 +40,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </motion.h3>
       </div>
     </div>
+    </Link>
   );
 };
 

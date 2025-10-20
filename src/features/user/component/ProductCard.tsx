@@ -7,12 +7,14 @@ interface ProductCardProps {
   imageUrl: string;
   category: string;
   title: string;
-  url: string;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ imageUrl, category, title, url }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ imageUrl, category, title}) => {
+  const categoryQuery = encodeURIComponent(category);
+  const productUrl = `/products?category=${categoryQuery}`;
+
   return (
-    <Link to={url} className="group block overflow-hidden">
+    <Link to={productUrl} className="group block overflow-hidden">
       <div 
         className="
           bg-white 
