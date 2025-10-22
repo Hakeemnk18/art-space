@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // A simple SVG icon for the dropdown
@@ -18,13 +18,32 @@ const ChevronDownIcon = () => (
 );
 
 const ToteBagHero = () => {
-  const [title, setTitle] = useState("Your  Design Here");
+  const [title, setTitle] = useState("Your Design Here");
+  const [inputValue, setInputValue] = useState("Your Design Here");
   const [fontStyle, setFontStyle] = useState("font-cookie");
   const toteBagImageUrl = "/images/compressed.tot-bag (1).png";
 
   const handleFontChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setFontStyle(e.target.value);
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTitle(inputValue);
+    }, 300);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [inputValue]);
+
+  const [firstLine, secondLine] = useMemo(() => {
+    const words = title.trim().split(/\s+/);
+    const first = words[0] || "";
+    const rest = words.slice(1).join(" ");
+
+    return [first, rest];
+  }, [title]);
 
   return (
     <section className="bg-gray-100 py-6 md:py-12 px-6 sm:px-6 lg:px-8">
@@ -40,21 +59,21 @@ const ToteBagHero = () => {
             <div className="transform  translate-y-30 sm:translate-y-50 text-center">
               <AnimatePresence mode="wait">
                 <motion.h1
-                  key={fontStyle} 
+                  key={fontStyle}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 0.75, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className={`text-[2.25rem] sm:text-[5rem] leading-none font-extrabold text-gray-900 tracking-wide ${fontStyle}`}
                 >
-                  {title.length > 8 ? (
+                  {secondLine ? (
                     <>
-                      {title.substring(0, 8)}
+                      {firstLine}
                       <br />
-                      {title.substring(8)}
+                      {secondLine}
                     </>
                   ) : (
-                    title
+                    firstLine
                   )}
                 </motion.h1>
               </AnimatePresence>
@@ -83,11 +102,11 @@ const ToteBagHero = () => {
               </label>
               <input
                 id="customText"
-                disabled={title.length > 20 }
-                onChange={(e) => setTitle(e.target.value)}
+                disabled={title.length > 20}
+                onChange={(e) => setInputValue(e.target.value)}
                 className="w-full px-4 py-3 text-gray-800 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#0a192f] transition-all"
                 type="text"
-                value={title}
+                value={inputValue}
                 placeholder="Type something..."
               />
             </div>
