@@ -117,7 +117,7 @@ export const products: IProduct[] = [
     id: 9,
     imageUrl: "/images/Gemini_white-tot-bag.png",
     scrollUrl: "/images/Gemini_white-tot-bag.png", // <-- Added
-    category: "Tot Bag",
+    category: "Tote Bag",
     title: "Hand Printed Tote Bag",
     price: 400,
     showPrice: "₹400",
@@ -141,7 +141,7 @@ export const products: IProduct[] = [
     id: 11,
     imageUrl: "/images/Gemini_black-tot-bag.png",
     scrollUrl: "/images/Gemini_black-tot-bag.png", // <-- Added
-    category: "Tot Bag",
+    category: "Tote Bag",
     title: "Hand Printed Tote Bag",
     price: 400,
     showPrice: "₹400",
@@ -165,7 +165,7 @@ export const products: IProduct[] = [
     id: 13,
     imageUrl: "/images/Gemini_black-tot-2.png",
     scrollUrl: "/images/Gemini_black-tot-2.png", // <-- Added
-    category: "Tot Bag",
+    category: "Tote Bag",
     title: "Hand Printed Tote Bag",
     price: 400,
     showPrice: "₹400",
@@ -189,7 +189,7 @@ export const products: IProduct[] = [
     id: 15,
     imageUrl: "/images/Gemini_tot-whit-bag-2.png",
     scrollUrl: "/images/Gemini_tot-whit-bag-2.png", // <-- Added
-    category: "Tot Bag",
+    category: "Tote Bag",
     title: "Hand Printed Tote Bag",
     price: 400,
     showPrice: "₹400",
@@ -201,7 +201,7 @@ export const products: IProduct[] = [
     id: 16,
     imageUrl: "/images/Gemini_black-tot-4.png",
     scrollUrl: "/images/Gemini_black-tot-4.png", // <-- Added
-    category: "Tot Bag",
+    category: "Tote Bag",
     title: "Hand Printed Tote Bag",
     price: 400,
     showPrice: "₹400",
@@ -213,7 +213,7 @@ export const products: IProduct[] = [
     id: 17,
     imageUrl: "/images/Gemini_tot-black-5.png",
     scrollUrl: "/images/Gemini_tot-black-5.png", // <-- Added
-    category: "Tot Bag",
+    category: "Tote Bag",
     title: "Hand Printed Tote Bag",
     price: 400,
     showPrice: "₹400",
@@ -261,7 +261,7 @@ export const products: IProduct[] = [
     id: 21,
     imageUrl: "/images/Gemini_black-tot-6.png",
     scrollUrl: "/images/Gemini_black-tot-6.png", // <-- Added
-    category: "Tot Bag",
+    category: "Tote Bag",
     title: "Hand Printed Tote Bag",
     price: 400,
     showPrice: "₹400",
