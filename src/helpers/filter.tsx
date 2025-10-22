@@ -20,9 +20,9 @@ export const toFilteredProduct = (
         (item) => item.category.toLowerCase() === "wall decor"
       );
       break;
-    case "Tot Bag":
+    case "Tote Bag":
       sorted = products.filter(
-        (item) => item.category.toLowerCase() === "tot bag"
+        (item) => item.category.toLowerCase() === "tote bag"
       );
       break;
     case "Embroidery":

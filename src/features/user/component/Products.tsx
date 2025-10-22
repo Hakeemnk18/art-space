@@ -25,7 +25,7 @@ const FeaturedProducts = () => {
     "Z - A",
   ];
 
-  const filterOptions = ["All", "Bouquets", "Tot Bag", "Embroidery","Frame", 'Gift', 'Wall Decor',"Wedding Supplies"];
+  const filterOptions = ["All", "Bouquets", "Tote Bag", "Embroidery","Frame", 'Gift', 'Wall Decor',"Wedding Supplies"];
 
   const handleFilter = () => {
     setIsSortModal(false);
@@ -38,7 +38,7 @@ const FeaturedProducts = () => {
   };
 
   const handleShopNow = () => {
-    const message = `Hi! I want to buy the tot bag.`;
+    const message = `Hi, I would like to buy something from you.`;
     const url = `https://wa.me/${
       918714732282
     }?text=${encodeURIComponent(message)}`;
