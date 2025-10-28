@@ -16,7 +16,7 @@ const FeaturedProducts = () => {
   const [selectedSort, setSelectedSort] = useState<string>("");
   const [isFilterModal, setIsfilterModal] = useState<boolean>(false);
   const [selectedFilter, setSelectedFilter] = useState<string>(categoryFilter || "All");
-  const [selectedProductName, setSelectedProductName] = useState<string>()
+  
   const staticData :IProduct[] = products
 
   const sortOptions = [
@@ -38,9 +38,7 @@ const FeaturedProducts = () => {
     setIsSortModal(true);
   };
 
-  const handleSlectedProductName = (name: string)=>{
-    setSelectedProductName(name)
-  }
+  
 
   const handleShopNow = (productName: string) => {
     const message = `Hi, I am interested in purchasing the ${productName}.Could you please share the price and availability details?`
