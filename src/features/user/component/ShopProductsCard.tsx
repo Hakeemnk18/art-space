@@ -6,7 +6,7 @@ interface ShopProductCardProps {
   title: string;
   price: string;
   url: string;
-  handleshopNow:()=>void
+  handleshopNow:(name: string)=>void
 }
 
 const ShopProductCard: React.FC<ShopProductCardProps> = ({
@@ -16,9 +16,9 @@ const ShopProductCard: React.FC<ShopProductCardProps> = ({
   handleshopNow
 }) => {
   return (
-    // The whole card is a link, and the `group` class enables hover effects
+    
     <div
-      onClick={handleshopNow}
+      onClick={()=> handleshopNow(title)}
       className="
     group  overflow-hidden
      bg-white 

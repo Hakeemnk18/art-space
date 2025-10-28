@@ -269,5 +269,16 @@ export const products: IProduct[] = [
     isNewArrivals: false,
     isFeatured: false,
   },
-  
+  {
+    id: 22,
+    imageUrl: "/images/Gemini_Generated_Image_x401qax401qax401.png",
+    scrollUrl: "/images/Gemini_Generated_Image_x401qax401qax401.png", 
+    category: "Bouquets",
+    title: "Flower Bouquet",
+    price: 1400,
+    showPrice: "₹1400",
+    url: "/products/sunset-peony-burst",
+    isNewArrivals: false,
+    isFeatured: false,
+  }
 ];
