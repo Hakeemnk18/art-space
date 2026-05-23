@@ -11,7 +11,8 @@ const ArtHero = ()=> {
   bg-no-repeat bg-center bg-cover overflow-hidden rounded-b-xl
   bg-[url('https://res.cloudinary.com/ddblal31l/image/upload/v1779513548/image-2-bg-for-pc_d6kirn.png')]
   lg:bg-[url('https://res.cloudinary.com/ddblal31l/image/upload/v1779513548/image-2-bg-for-pc_d6kirn.png')]"
->
+> 
+
     {/* Add the Dark Overlay for Text Readability */}
     <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
     
