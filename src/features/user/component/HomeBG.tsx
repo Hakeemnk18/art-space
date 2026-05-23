@@ -9,8 +9,8 @@ const ArtHero = ()=> {
   <div 
     className="relative flex items-center justify-center min-h-[500px] py-16 px-4 sm:px-6 lg:px-8 
                bg-no-repeat bg-center bg-cover overflow-hidden rounded-b-xl
-               bg-[url('/images/bg-image-tot-bag.png')] 
-               lg:bg-[url('images/image-2-bg-for-pc.png')]
+               bg-[url('https://res.cloudinary.com/ddblal31l/image/upload/v1779513548/image-2-bg-for-pc_d6kirn.png')] 
+               lg:bg-[url('https://res.cloudinary.com/ddblal31l/image/upload/v1779513548/image-2-bg-for-pc_d6kirn.png')]
                
                 "
                 // <-- Mobile default
