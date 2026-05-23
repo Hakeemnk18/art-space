@@ -26,6 +26,7 @@ const ArtHero = ()=> {
         <p className="hidden text-base sm:text-lg lg:text-xl text-gray-200 mb-8 sm:block">
           Explore our curated collection of artisanal tote bags, vibrant flower bouquets, and intricate embroidery pieces. Each item is crafted with passion and skill.
         </p>
+        
         <div className="flex justify-center lg:justify-start gap-4">
           <Link
           to={'/products'}
