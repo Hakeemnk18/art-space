@@ -6,22 +6,13 @@ const ArtHero = ()=> {
 
   
     return (
-  <div 
-    className="relative flex items-center justify-center min-h-[500px] py-16 px-4 sm:px-6 lg:px-8 
-               bg-no-repeat bg-center bg-cover overflow-hidden rounded-b-xl
-               bg-[url('https://res.cloudinary.com/ddblal31l/image/upload/v1779513548/image-2-bg-for-pc_d6kirn.png')] 
-               lg:bg-[url('https://res.cloudinary.com/ddblal31l/image/upload/v1779513548/image-2-bg-for-pc_d6kirn.png')]
-               
-                "
-                // <-- Mobile default
-             
-    //  style={{ 
-    // //   // backgroundImage: `url('/images/bg-image-tot-bag.png')`, 
-    //  backgroundImage: `url('/images/image-2-bg-for-pc.png')`, 
-      
-      
-    //  }}
-  >
+  <div
+  className="relative flex items-center justify-center min-h-[500px] py-16 px-4 sm:px-6 lg:px-8 
+  bg-no-repeat bg-center bg-cover overflow-hidden rounded-b-xl
+  bg-[url('https://res.cloudinary.com/ddblal31l/image/upload/v1779513548/image-2-bg-for-pc_d6kirn.png')]
+  lg:bg-[url('https://res.cloudinary.com/ddblal31l/image/upload/v1779513548/image-2-bg-for-pc_d6kirn.png')]"
+> 
+
     {/* Add the Dark Overlay for Text Readability */}
     <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
     
